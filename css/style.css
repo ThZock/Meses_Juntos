@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════
-   3 MESES CONTIGO — Estilos principales
-   Edita las variables en :root para cambiar colores
+   style.css — 3 Meses Contigo
+   Tema morado + pixel Minecraft
    ═══════════════════════════════════════════════════════ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -16,7 +16,7 @@
 html{scroll-behavior:smooth}
 body{background:var(--cream);color:var(--text);font-family:'Lato',sans-serif;font-weight:300;overflow-x:hidden}
 
-/* ── PIXEL BACKGROUND ── */
+/* ── PIXEL STARS ── */
 .pixel-bg{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden}
 .pixel-star{position:absolute;image-rendering:pixelated;border-radius:0;opacity:0;animation:twinkle linear infinite}
 @keyframes twinkle{0%,100%{opacity:0;transform:scale(1)}50%{opacity:.9;transform:scale(1.6)}}
@@ -24,15 +24,7 @@ body{background:var(--cream);color:var(--text);font-family:'Lato',sans-serif;fon
 @keyframes fall{0%{transform:translateY(0) rotate(0deg);opacity:0}5%{opacity:.8}85%{opacity:.5}100%{transform:translateY(110vh) rotate(540deg) translateX(40px);opacity:0}}
 
 /* ── MUSIC BTN ── */
-.music-btn{
-  position:fixed;bottom:1.5rem;left:1.5rem;
-  background:linear-gradient(135deg,var(--purple),var(--purple-light));
-  color:#fff;border:2px solid var(--purple-glow);border-radius:8px;
-  padding:.8rem 1.4rem;font-size:.85rem;cursor:pointer;z-index:200;
-  box-shadow:0 0 20px rgba(124,58,237,.5);font-family:'Lato',sans-serif;
-  transition:transform .2s,box-shadow .2s;display:flex;align-items:center;gap:.5rem;
-  user-select:none;
-}
+.music-btn{position:fixed;bottom:1.5rem;left:1.5rem;background:linear-gradient(135deg,var(--purple),var(--purple-light));color:#fff;border:2px solid var(--purple-glow);border-radius:8px;padding:.8rem 1.4rem;font-size:.85rem;cursor:pointer;z-index:200;box-shadow:0 0 20px rgba(124,58,237,.5);font-family:'Lato',sans-serif;transition:transform .2s,box-shadow .2s;display:flex;align-items:center;gap:.5rem;user-select:none}
 .music-btn:hover{transform:scale(1.06);box-shadow:0 0 30px rgba(168,85,247,.7)}
 .music-note{display:inline-block}
 .music-btn.playing .music-note{animation:spin-note 1.5s linear infinite}
@@ -73,28 +65,114 @@ body{background:var(--cream);color:var(--text);font-family:'Lato',sans-serif;fon
 .chars-couple{text-align:center;margin-top:1.5rem;padding-bottom:.5rem}
 .chars-couple p{font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;color:var(--purple-glow);opacity:.9}
 
-/* ── CREEPER ZONE ── */
-.creeper-zone{position:relative;z-index:2;background:linear-gradient(180deg,var(--purple-dark) 0%,#0f172a 100%);padding:2.5rem 1rem 0;overflow:hidden;min-height:280px}
-.creeper-zone::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0,transparent 15px,rgba(34,197,94,.04) 15px,rgba(34,197,94,.04) 16px),repeating-linear-gradient(0deg,transparent 0,transparent 15px,rgba(34,197,94,.04) 15px,rgba(34,197,94,.04) 16px)}
-.creeper-zone-title{text-align:center;font-family:'Playfair Display',serif;font-style:italic;color:#86efac;font-size:1.1rem;margin-bottom:.5rem;text-shadow:0 0 15px rgba(134,239,172,.5)}
-.creeper-zone-sub{text-align:center;font-size:.8rem;color:#4ade80;opacity:.7;margin-bottom:1.5rem;letter-spacing:.05em}
-.creeper-field{position:relative;height:220px;width:100%;max-width:960px;margin:0 auto}
-/* ground */
-.creeper-field::after{content:"";position:absolute;bottom:0;left:0;right:0;height:24px;background:repeating-linear-gradient(90deg,#15803d 0,#15803d 24px,#166534 24px,#166534 48px);image-rendering:pixelated}
+/* ══════════════════════════════════════
+   CREEPER ZONE
+   ══════════════════════════════════════ */
+.creeper-zone{
+  position:relative; z-index:2;
+  background:linear-gradient(180deg,var(--purple-dark) 0%,#0f172a 60%,#0a1a0a 100%);
+  padding:2.5rem 1rem 0; overflow:hidden; min-height:280px;
+}
+/* Grid de fondo (cielo Minecraft) */
+.creeper-zone::before{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:
+    repeating-linear-gradient(90deg,transparent 0,transparent 15px,rgba(100,200,100,.03) 15px,rgba(100,200,100,.03) 16px),
+    repeating-linear-gradient(0deg,transparent 0,transparent 15px,rgba(100,200,100,.03) 15px,rgba(100,200,100,.03) 16px);
+}
+.creeper-zone-title{text-align:center;font-family:'Playfair Display',serif;font-style:italic;color:#86efac;font-size:1.1rem;margin-bottom:.4rem;text-shadow:0 0 15px rgba(134,239,172,.5);position:relative;z-index:4}
+.creeper-zone-sub{text-align:center;font-size:.8rem;color:#4ade80;opacity:.75;margin-bottom:1rem;letter-spacing:.05em;position:relative;z-index:4}
 
-/* individual creeper */
-.creeper-wrap{position:absolute;bottom:24px;cursor:pointer;user-select:none}
-.creeper-wrap svg{image-rendering:pixelated;display:block}
-.creeper-walk{animation:cWalk 0.5s steps(2) infinite}
-@keyframes cWalk{0%{transform:translateY(0)}50%{transform:translateY(-3px)}}
-.creeper-flash{animation:cFlash 0.15s steps(1) infinite}
-@keyframes cFlash{0%,100%{filter:brightness(1) drop-shadow(0 0 4px #4ade80)}50%{filter:brightness(5) drop-shadow(0 0 16px #fff)}}
-/* explosion */
-.c-explosion{position:absolute;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);animation:cExplode .55s ease-out forwards;background:radial-gradient(circle,rgba(255,220,50,.95) 0%,rgba(239,68,68,.8) 35%,rgba(124,58,237,.4) 65%,transparent 100%)}
-@keyframes cExplode{0%{width:0;height:0;opacity:1}100%{width:220px;height:220px;opacity:0}}
-/* egg */
-.c-egg{position:absolute;font-size:1.8rem;pointer-events:none;animation:cEggDrop 1.4s cubic-bezier(.4,0,.2,1) forwards}
-@keyframes cEggDrop{0%{transform:translateY(-40px) scale(.4);opacity:1}55%{transform:translateY(0) scale(1.2)}70%{transform:translateY(-8px) scale(.95)}85%{transform:translateY(0) scale(1)}100%{transform:translateY(0) scale(1);opacity:1}}
+/* Campo donde caminan los creepers */
+.creeper-field{position:relative;height:200px;width:100%;max-width:960px;margin:0 auto}
+
+/* ── SUELO MINECRAFT (cesped pixel art) ── */
+.mc-ground{
+  position:absolute; bottom:0; left:0; right:0; height:32px;
+  overflow:hidden; z-index:2;
+}
+/* Fila superior = hierba verde */
+.mc-ground-grass{
+  position:absolute; bottom:16px; left:0; right:0; height:16px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #4CAF50 0px, #4CAF50 15px,
+      #45a049 15px,#45a049 16px
+    );
+  image-rendering:pixelated;
+}
+/* Variación de manchas oscuras y claras en la hierba */
+.mc-ground-grass::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    /* manchas oscuras */
+    radial-gradient(ellipse 4px 6px at 20px 8px,  #2d7a2d 0%,transparent 100%),
+    radial-gradient(ellipse 4px 6px at 60px 10px, #2d7a2d 0%,transparent 100%),
+    radial-gradient(ellipse 4px 6px at 110px 6px, #2d7a2d 0%,transparent 100%),
+    radial-gradient(ellipse 4px 6px at 160px 9px, #2d7a2d 0%,transparent 100%),
+    radial-gradient(ellipse 4px 6px at 200px 7px, #2d7a2d 0%,transparent 100%),
+    radial-gradient(ellipse 4px 6px at 240px 10px,#2d7a2d 0%,transparent 100%),
+    radial-gradient(ellipse 4px 6px at 290px 6px, #2d7a2d 0%,transparent 100%),
+    radial-gradient(ellipse 4px 6px at 340px 9px, #2d7a2d 0%,transparent 100%),
+    radial-gradient(ellipse 4px 6px at 390px 7px, #2d7a2d 0%,transparent 100%),
+    /* manchas claras */
+    radial-gradient(ellipse 3px 4px at 40px 5px,  #66bb6a 0%,transparent 100%),
+    radial-gradient(ellipse 3px 4px at 85px 8px,  #66bb6a 0%,transparent 100%),
+    radial-gradient(ellipse 3px 4px at 135px 5px, #66bb6a 0%,transparent 100%),
+    radial-gradient(ellipse 3px 4px at 180px 8px, #66bb6a 0%,transparent 100%),
+    radial-gradient(ellipse 3px 4px at 220px 5px, #66bb6a 0%,transparent 100%),
+    radial-gradient(ellipse 3px 4px at 265px 8px, #66bb6a 0%,transparent 100%),
+    radial-gradient(ellipse 3px 4px at 315px 5px, #66bb6a 0%,transparent 100%),
+    radial-gradient(ellipse 3px 4px at 365px 8px, #66bb6a 0%,transparent 100%);
+  image-rendering:pixelated;
+}
+/* Fila inferior = tierra */
+.mc-ground-dirt{
+  position:absolute; bottom:0; left:0; right:0; height:16px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #8B5E3C 0px, #8B5E3C 15px,
+      #7a5230 15px,#7a5230 16px
+    );
+  image-rendering:pixelated;
+}
+.mc-ground-dirt::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 5px 5px at 25px 8px,  #6b4226 0%,transparent 100%),
+    radial-gradient(ellipse 5px 5px at 70px 5px,  #6b4226 0%,transparent 100%),
+    radial-gradient(ellipse 5px 5px at 120px 10px,#6b4226 0%,transparent 100%),
+    radial-gradient(ellipse 5px 5px at 170px 7px, #6b4226 0%,transparent 100%),
+    radial-gradient(ellipse 5px 5px at 220px 4px, #6b4226 0%,transparent 100%),
+    radial-gradient(ellipse 5px 5px at 270px 9px, #6b4226 0%,transparent 100%),
+    radial-gradient(ellipse 5px 5px at 50px 6px,  #a0724a 0%,transparent 100%),
+    radial-gradient(ellipse 5px 5px at 95px 11px, #a0724a 0%,transparent 100%),
+    radial-gradient(ellipse 5px 5px at 145px 3px, #a0724a 0%,transparent 100%),
+    radial-gradient(ellipse 5px 5px at 195px 8px, #a0724a 0%,transparent 100%),
+    radial-gradient(ellipse 5px 5px at 245px 5px, #a0724a 0%,transparent 100%),
+    radial-gradient(ellipse 5px 5px at 295px 10px,#a0724a 0%,transparent 100%);
+  image-rendering:pixelated;
+}
+
+/* ── Creeper animations ── */
+.creeper-wrap{position:absolute;bottom:24px;cursor:pointer;user-select:none;transition:left .016s linear}
+.creeper-walk{animation:cWalk .45s steps(2) infinite}
+@keyframes cWalk{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.creeper-flash{animation:cFlash .14s steps(1) infinite}
+@keyframes cFlash{0%,100%{filter:brightness(1) drop-shadow(0 0 5px #4ab54a)}50%{filter:brightness(6) drop-shadow(0 0 20px #fff)}}
+
+/* Explosión y regalo */
+.c-explosion{position:absolute;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);animation:cBoom .55s ease-out forwards;background:radial-gradient(circle,rgba(255,220,50,.95) 0%,rgba(239,68,68,.8) 35%,rgba(124,58,237,.4) 65%,transparent 100%)}
+@keyframes cBoom{0%{width:0;height:0;opacity:1}100%{width:220px;height:220px;opacity:0}}
+.c-egg{position:absolute;font-size:1.8rem;pointer-events:none;animation:cEgg 1.4s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes cEgg{0%{transform:translateY(-40px) scale(.4);opacity:1}55%{transform:translateY(0) scale(1.2)}70%{transform:translateY(-8px) scale(.95)}85%{transform:translateY(0) scale(1)}100%{transform:translateY(0) scale(1);opacity:1}}
+
+/* Nubes pixel */
+.pixel-cloud{position:absolute;pointer-events:none;z-index:3}
 
 /* ── GAMING ── */
 .gaming-section{position:relative;z-index:1;padding:4rem 2rem;background:linear-gradient(135deg,#0f0a1e 0%,#1e1b4b 100%);overflow:hidden}
@@ -109,37 +187,34 @@ body{background:var(--cream);color:var(--text);font-family:'Lato',sans-serif;fon
 .mc-pixel{width:12px;height:12px;image-rendering:pixelated;border-radius:0}
 .lol-rune{width:50px;height:50px;margin:1rem auto 0;opacity:.7;filter:drop-shadow(0 0 8px rgba(196,181,253,.8))}
 
-/* ── VIDEO SECTION ── */
+/* ── VIDEO ── */
 .video-section{position:relative;z-index:1;padding:5rem 2rem;background:radial-gradient(ellipse at 50% 50%,#3b0764 0%,#1e1b4b 60%,#0f0a1e 100%)}
 .video-section .section-title,.video-section .section-label{color:var(--purple-glow)}
 .video-wrapper{max-width:720px;margin:0 auto;background:rgba(0,0,0,.4);border:2px solid var(--purple-mid);border-radius:20px;overflow:hidden;box-shadow:0 0 40px rgba(124,58,237,.4),0 0 80px rgba(124,58,237,.15)}
 .video-wrapper video,.video-wrapper iframe{width:100%;aspect-ratio:16/9;display:block;border:none}
-/* placeholder shown when no video is set */
 .video-placeholder{aspect-ratio:16/9;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(76,29,149,.3));padding:2rem}
 .video-placeholder-icon{font-size:4rem;filter:drop-shadow(0 0 15px rgba(196,181,253,.7));animation:heartbeat 2s ease-in-out infinite}
 .video-placeholder-text{font-family:'Playfair Display',serif;font-style:italic;color:var(--purple-glow);font-size:1.05rem;text-align:center;line-height:1.6}
 .video-placeholder-hint{font-size:.78rem;color:#a78bfa;text-align:center;line-height:1.8;max-width:420px}
 .video-placeholder-hint code{background:rgba(124,58,237,.35);padding:.15rem .4rem;border-radius:4px;font-family:monospace;font-size:.72rem;color:var(--purple-glow)}
 
-/* ── SHARED SECTIONS ── */
+/* ── SHARED ── */
 section{position:relative;z-index:1;padding:5rem 2rem}
 .section-label{font-family:'Playfair Display',serif;font-style:italic;font-size:.85rem;color:var(--purple-light);letter-spacing:.2em;text-transform:uppercase;text-align:center;margin-bottom:.75rem}
 .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3rem);text-align:center;color:var(--purple);margin-bottom:1rem}
 .section-rule{width:60px;height:3px;background:linear-gradient(90deg,var(--purple),var(--purple-light));margin:0 auto 3rem;border-radius:2px}
 
-/* ── GALLERY ── */
+/* ── GALLERY (solo lectura) ── */
 .gallery-section{background:var(--purple-soft)}
 .gallery-section .section-title{color:var(--purple-dark)}
 .gallery-grid{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
-.photo-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(124,58,237,.15);transition:transform .35s,box-shadow .35s;border:2px solid var(--purple-glow)}
+.photo-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(124,58,237,.15);border:2px solid var(--purple-glow);transition:transform .35s,box-shadow .35s}
 .photo-card:hover{transform:translateY(-6px) rotate(.5deg);box-shadow:0 12px 40px rgba(124,58,237,.3)}
-.photo-slot{width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#ede9fe,#ddd6fe);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;position:relative;overflow:hidden}
-.photo-slot img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;display:none}
-.photo-slot.has-photo img{display:block}
-.photo-slot.has-photo .upload-hint{display:none}
-.upload-hint{font-size:.75rem;color:var(--purple-light);letter-spacing:.08em;text-align:center;padding:1rem;pointer-events:none}
-.upload-icon{font-size:2.2rem}
-.upload-btn{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.photo-slot{width:100%;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(135deg,#ede9fe,#ddd6fe);display:flex;align-items:center;justify-content:center}
+.photo-slot img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-placeholder{display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--purple-light)}
+.photo-placeholder span{font-size:2.8rem}
+.photo-placeholder p{font-size:.75rem;letter-spacing:.06em;text-align:center;opacity:.8}
 .photo-caption{padding:1rem 1.25rem;font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;color:var(--purple);text-align:center}
 
 /* ── REASONS ── */
@@ -188,6 +263,7 @@ footer small{display:block;margin-top:.75rem;font-family:'Lato',sans-serif;font-
 .footer-pixels{display:flex;justify-content:center;gap:4px;margin-top:1rem}
 .footer-pixel{width:10px;height:10px;image-rendering:pixelated}
 
+/* ── RESPONSIVE ── */
 @media(max-width:700px){
   .gaming-grid{grid-template-columns:1fr}
   .chars-row{gap:1rem}

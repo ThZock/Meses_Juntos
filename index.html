@@ -4,51 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3 Meses Contigo 💜</title>
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-
-  <!-- Estilos -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════
-     AUDIO — pon tu canción en assets/audio/
-     Renombra el archivo como: cancion.mp3
-     ══════════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════════
+     AUDIO
+     Pon tu canción en assets/audio/cancion.mp3
+     ═══════════════════════════════════════════ -->
 <audio id="bgMusic" loop>
-  <!--
-    OPCIÓN 1: archivo local (recomendado para GitHub Pages)
-    Descarga "Steal the Show" u otra canción y ponla en assets/audio/
-  -->
   <source src="assets/audio/cancion.mp3" type="audio/mpeg">
-  <!--
-    OPCIÓN 2: URL directa (si tienes un link de descarga directa del MP3)
-    <source src="https://tu-link-directo.com/cancion.mp3" type="audio/mpeg">
-  -->
 </audio>
 
 <!-- Fondo de estrellas pixel -->
 <div class="pixel-bg" id="pixelBg"></div>
 
-<!-- Botón de música -->
+<!-- Botón música -->
 <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
-  <span class="music-note" id="musicNote">🎵</span>
+  <span class="music-note">🎵</span>
   <span id="musicLabel">Pausar música</span>
 </button>
 
 
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════════════════
      HERO
-     ══════════════════════════════════════════ -->
+     EDITA: nombres en hero-sub
+     ═══════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero-pixels"></div>
   <p class="hero-badge">✦ Una historia de amor ✦</p>
   <h1 class="hero-title">3 <span>Meses</span><br>Contigo</h1>
 
-  <!-- ══ EDITA LOS NOMBRES AQUÍ ══ -->
+  <!-- ══ EDITA LOS NOMBRES ══ -->
   <p class="hero-sub">
     Tres meses llenos de sonrisas, aventuras y momentos que
     <strong>TU NOMBRE</strong> y <strong>SU NOMBRE</strong>
@@ -60,60 +49,40 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════════════════
      PERSONAJES FAVORITOS
-     Las imágenes deben estar en assets/images/
-     ══════════════════════════════════════════ -->
+     Imágenes en assets/images/
+     ═══════════════════════════════════════════ -->
 <div class="chars-strip">
   <p class="chars-title">✨ Nuestros personajes favoritos nos acompañan ✨</p>
   <div class="chars-row">
 
-    <!-- KUROMI
-         Coloca la imagen en assets/images/kuromi.png -->
     <div class="char-wrap float-a">
-      <img class="char-img"
-           src="assets/images/kuromi.png"
-           alt="Kuromi"
-           onerror="this.style.fontSize='3rem';this.style.background='#2b2b2b';this.alt='🖤';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center'">
+      <img class="char-img" src="assets/images/kuromi.png" alt="Kuromi"
+           onerror="this.style.background='#2b2b2b';this.style.borderColor='#cc0055'">
       <span class="char-label">Kuromi 🖤</span>
     </div>
 
-    <!-- RAPUNZEL
-         Coloca la imagen en assets/images/rapunzel.png -->
     <div class="char-wrap float-b">
-      <img class="char-img"
-           src="assets/images/rapunzel.png"
-           alt="Rapunzel"
+      <img class="char-img" src="assets/images/rapunzel.png" alt="Rapunzel"
            onerror="this.style.background='#9b59b6'">
       <span class="char-label">Rapunzel 🌸</span>
     </div>
 
-    <!-- EMBER
-         Coloca la imagen en assets/images/ember.png -->
     <div class="char-wrap float-c">
-      <img class="char-img"
-           src="assets/images/ember.png"
-           alt="Ember"
+      <img class="char-img" src="assets/images/ember.png" alt="Ember"
            onerror="this.style.background='#e84118'">
       <span class="char-label">Ember 🔥</span>
     </div>
 
-    <!-- WADE
-         Coloca la imagen en assets/images/wade.png -->
     <div class="char-wrap float-d">
-      <img class="char-img"
-           src="assets/images/wade.png"
-           alt="Wade"
+      <img class="char-img" src="assets/images/wade.png" alt="Wade"
            onerror="this.style.background='#29b6f6'">
       <span class="char-label">Wade 💧</span>
     </div>
 
-    <!-- FLYNN RIDER
-         Coloca la imagen en assets/images/flynn.png -->
     <div class="char-wrap float-e">
-      <img class="char-img"
-           src="assets/images/flynn.png"
-           alt="Flynn Rider"
+      <img class="char-img" src="assets/images/flynn.png" alt="Flynn Rider"
            onerror="this.style.background='#5d4037'">
       <span class="char-label">Flynn Rider 😏</span>
     </div>
@@ -125,9 +94,9 @@
 </div>
 
 
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════════════════
      CONTADORES
-     ══════════════════════════════════════════ -->
+     ═══════════════════════════════════════════ -->
 <section class="counter-section">
   <p class="section-label">Hemos compartido</p>
   <h2 class="section-title">Nuestros Números</h2>
@@ -153,31 +122,39 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════════════════
      CREEPERS DE MINECRAFT
-     ══════════════════════════════════════════ -->
-<div class="creeper-zone">
+     ═══════════════════════════════════════════ -->
+<div class="creeper-zone" id="creeperZone">
   <p class="creeper-zone-title">⛏️ ¡Los Creepers también celebran! ⛏️</p>
   <p class="creeper-zone-sub">Haz clic en un Creeper para que explote y deje un regalo 💜</p>
-  <div class="creeper-field" id="creeperField"></div>
+
+  <!-- Campo de creepers (las nubes se inyectan aquí desde JS) -->
+  <div class="creeper-field" id="creeperField">
+    <!-- Suelo estilo Minecraft -->
+    <div class="mc-ground">
+      <div class="mc-ground-grass"></div>
+      <div class="mc-ground-dirt"></div>
+    </div>
+  </div>
 </div>
 
 
-<!-- ══════════════════════════════════════════
-     GAMING — Minecraft & League of Legends
-     ══════════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════════
+     GAMING — Minecraft & LoL
+     EDITA: textos dentro de game-text
+     ═══════════════════════════════════════════ -->
 <section class="gaming-section">
   <p class="section-label" style="color:var(--purple-glow)">Nuestro mundo</p>
   <h2 class="section-title" style="color:var(--purple-glow)">Unidos también en el juego</h2>
   <div class="section-rule"></div>
   <div class="gaming-grid">
 
-    <!-- MINECRAFT -->
     <div class="game-card">
       <span class="game-logo">⛏️</span>
       <h3 class="game-title">Minecraft</h3>
       <div class="mc-pixels" id="mcHeart"></div>
-      <!-- ══ EDITA EL TEXTO DE MINECRAFT AQUÍ ══ -->
+      <!-- ══ EDITA ══ -->
       <p class="game-text" style="margin-top:1rem">
         Como en Minecraft, juntos construimos algo hermoso desde cero.
         Cada bloque es un momento, cada construcción es un recuerdo.
@@ -186,7 +163,6 @@
       <div class="mc-pixels" style="margin-top:1.2rem" id="mcBlocks"></div>
     </div>
 
-    <!-- LEAGUE OF LEGENDS -->
     <div class="game-card">
       <span class="game-logo">⚔️</span>
       <h3 class="game-title">League of Legends</h3>
@@ -197,7 +173,7 @@
         <circle cx="50" cy="50" r="10" fill="#a855f7" opacity=".8"/>
         <circle cx="50" cy="50" r="5" fill="white" opacity=".9"/>
       </svg>
-      <!-- ══ EDITA EL TEXTO DE LOL AQUÍ ══ -->
+      <!-- ══ EDITA ══ -->
       <p class="game-text">
         Como en la Grieta del Invocador, somos el mejor equipo.
         Tú eres mi duo preferido, el que siempre quiero tener en mi equipo,
@@ -212,60 +188,59 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════════════════
      VIDEO ROMÁNTICO
-     ══════════════════════════════════════════ -->
+     ═══════════════════════════════════════════ -->
 <section class="video-section">
   <p class="section-label">Solo para ti</p>
   <h2 class="section-title">Un Video con Todo Mi Amor</h2>
   <div class="section-rule"></div>
 
   <div class="video-wrapper">
-
     <!--
-    ════════════════════════════════════════════════════
-    OPCIÓN A — Video local (archivo en tu proyecto)
-    Sube tu video a assets/video/ y descomenta esto:
+    ══════════════════════════════════════════════════════
+    OPCIÓN A — Video local (MP4 en tu proyecto)
+    Sube el archivo a assets/video/ y descomenta:
 
-    <video controls autoplay muted loop>
+    <video controls>
       <source src="assets/video/mi-video.mp4" type="video/mp4">
     </video>
 
-    ════════════════════════════════════════════════════
+    ══════════════════════════════════════════════════════
     OPCIÓN B — YouTube embed
-    Reemplaza XXXXXXXXXXX por el ID del video de YouTube:
+    Reemplaza XXXXXXXXXXX con el ID del video:
 
     <iframe
-      src="https://www.youtube.com/embed/XXXXXXXXXXX?autoplay=0&rel=0"
+      src="https://www.youtube.com/embed/XXXXXXXXXXX?rel=0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
 
-    ════════════════════════════════════════════════════
-    Por ahora se muestra el placeholder de abajo.
-    Cuando agregues el video, elimina el bloque .video-placeholder
-    ════════════════════════════════════════════════════
+    ══════════════════════════════════════════════════════
+    Cuando agregues el video, elimina el bloque de abajo.
+    ══════════════════════════════════════════════════════
     -->
 
-    <!-- PLACEHOLDER — elimina esto cuando pongas el video real -->
+    <!-- PLACEHOLDER — elimina cuando tengas el video -->
     <div class="video-placeholder">
       <div class="video-placeholder-icon">🎬</div>
       <p class="video-placeholder-text">Aquí irá nuestro video especial 💜<br>¡Muy pronto!</p>
       <p class="video-placeholder-hint">
-        Para agregar tu video, abre <code>index.html</code> y busca la sección
-        <code>VIDEO ROMÁNTICO</code>. Tienes dos opciones:<br><br>
-        • <strong>Video local:</strong> copia el archivo a <code>assets/video/</code><br>
-        • <strong>YouTube:</strong> pega el ID del video en el iframe
+        Abre <code>index.html</code>, busca la sección <code>VIDEO ROMÁNTICO</code>
+        y sigue las instrucciones de <strong>Opción A</strong> (MP4 local)
+        o <strong>Opción B</strong> (YouTube).
       </p>
     </div>
-
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════════
-     GALERÍA DE FOTOS
-     ══════════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════════
+     GALERÍA — SOLO LECTURA
+     EDITA el array `photos` en js/main.js
+     Agrega tus fotos a assets/images/ y pon
+     la ruta en el campo src de cada elemento.
+     ═══════════════════════════════════════════ -->
 <section class="gallery-section">
   <p class="section-label">Nuestras memorias</p>
   <h2 class="section-title">Aventuras Juntos</h2>
@@ -274,9 +249,10 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════════════════
      RAZONES
-     ══════════════════════════════════════════ -->
+     EDITA el array `reasons` en js/main.js
+     ═══════════════════════════════════════════ -->
 <section class="reasons-section">
   <p class="section-label">Por qué te amo</p>
   <h2 class="section-title" style="color:var(--purple-glow)">Mis Razones</h2>
@@ -285,9 +261,10 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════════════════
      LÍNEA DE TIEMPO
-     ══════════════════════════════════════════ -->
+     EDITA el array `timelineEvents` en js/main.js
+     ═══════════════════════════════════════════ -->
 <section class="timeline-section">
   <p class="section-label">Nuestra historia</p>
   <h2 class="section-title">Momentos Especiales</h2>
@@ -296,15 +273,16 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════════════════
      CARTA DE AMOR
-     ══════════════════════════════════════════ -->
+     EDITA el texto del párrafo y la firma
+     ═══════════════════════════════════════════ -->
 <section class="letter-section">
   <p class="section-label">Solo para ti</p>
   <h2 class="section-title" style="color:var(--purple-glow)">Una Carta de Amor</h2>
   <div class="section-rule"></div>
   <div class="letter">
-    <!-- ══ EDITA LA CARTA AQUÍ ══ -->
+    <!-- ══ EDITA LA CARTA ══ -->
     <p>
       Desde el primer día que llegaste a mi vida, todo comenzó a brillar de una manera
       diferente. Cada mañana saber que eres mío o mía es el regalo más bonito que me da
@@ -312,25 +290,23 @@
       Estos tres meses han sido los más felices que recuerdo, y quiero que sean solo el
       principio de muchos más juntos.
     </p>
-    <!-- ══ EDITA LA FIRMA AQUÍ ══ -->
+    <!-- ══ EDITA LA FIRMA ══ -->
     <p class="letter-sig">Con todo mi amor 💜</p>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════════════════
      FOOTER
-     ══════════════════════════════════════════ -->
+     EDITA: mensaje, nombres y fecha
+     ═══════════════════════════════════════════ -->
 <footer>
-  <!-- ══ EDITA EL MENSAJE Y LOS DATOS AQUÍ ══ -->
+  <!-- ══ EDITA ══ -->
   <p>Felices 3 Meses, mi amor 💜</p>
   <div class="footer-pixels" id="footerPixels"></div>
   <small>TU NOMBRE → SU NOMBRE · Fecha especial · Con todo el amor 💜</small>
 </footer>
 
-
-<!-- Scripts (type="module" para soporte de import/export) -->
 <script type="module" src="js/main.js"></script>
-
 </body>
 </html>
