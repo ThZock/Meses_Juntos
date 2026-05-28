@@ -190,7 +190,7 @@ const photos = [
    ──────────────────────────────────────────── */
 const reasons = [
   { emoji:'😂', text:'Por tu risa contagiosa que ilumina hasta mis días más grises.' },
-  { emoji:'🎮', text:'Por ser mi compañero de juego favorito, en Minecraft, en LoL y en la vida.' },
+  { emoji:'🎮', text:'Por ser mi compañera de juego favorito, en Minecraft, en LoL y en la vida.' },
   { emoji:'🌟', text:'Por inspirarme a ser mejor persona cada día que pasa.' },
   { emoji:'💬', text:'Por escucharme siempre con el corazón, nunca solo con los oídos.' },
   { emoji:'🤗', text:'Por tus abrazos que se sienten como el hogar más seguro del mundo.' },
