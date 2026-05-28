@@ -161,11 +161,11 @@ const photos = [
    * Si no hay src la tarjeta muestra el emoji de placeholder.
    */
   { caption: 'Nuestra primera aventura 💜', src: 'assets/images/foto2.jpeg' },
-  { caption: 'Ese día especial ✨',          src: 'assets/images/foto1.jpeg' },
-  { caption: 'Juntos siempre 🌸',            src: 'assets/images/foto5.jpeg' },
-  { caption: 'Mi favorito contigo 💜',       src: 'assets/images/foto4.jpeg' },
-  { caption: 'Momentos que atesoro 🌷',      src: 'assets/images/foto6.jpeg' },
-  { caption: 'Felicidad pura 🥰',            src: 'assets/images/foto3.jpeg' },
+  { caption: 'Ese día especial ✨', src: 'assets/images/foto1.jpeg' },
+  { caption: 'Juntos siempre 🌸', src: 'assets/images/foto5.jpeg' },
+  { caption: 'Mi favorito contigo 💜', src: 'assets/images/foto4.jpeg' },
+  { caption: 'Momentos que atesoro 🌷', src: 'assets/images/foto6.jpeg' },
+  { caption: 'Felicidad pura 🥰', src: 'assets/images/foto3.jpeg' }
 ];
 
 (function buildGallery() {
