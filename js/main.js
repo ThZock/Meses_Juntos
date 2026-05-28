@@ -213,10 +213,10 @@ const reasons = [
    ── EDITA EL ARRAY timelineEvents ──
    ──────────────────────────────────────────── */
 const timelineEvents = [
-  { date:'El primer día',     event:'Cuando nos conocimos',    desc:'Un momento que cambió todo. Sin saberlo entonces, comenzaba lo más bonito.' },
+  { date:'El primer día',     event:'Cuando nos conocimos',    desc:'Enviarte ese primer mensaje fue la mejor decicion de mi vida.' },
   { date:'Primera semana',    event:'Nuestra primera cita',    desc:'Los nervios, la sonrisa, el descubrir que quería pasar más tiempo contigo.' },
-  { date:'El primer mes',     event:'El primero de muchos',    desc:'Ya sabía que esto era especial. Que tú eras especial.' },
-  { date:'Segundo mes',       event:'Aventuras y complicidad', desc:'Cada plan juntos se volvía una historia que contar.' },
+  { date:'El primer mes',     event:'El primero de muchos',    desc:'Desde el primer mes supe lo especial que seria nuestra relacion y lo importante que seria para mi vida.' },
+  { date:'Segundo mes',       event:'Aventuras y complicidad', desc:'Cada plan juntos es una historia que contar.' },
   { date:'Hoy — 3 meses 🎉', event:'¡Tres meses contigo!',   desc:'Y solo quiero que sean el comienzo de muchísimos más a tu lado.' },
 ];
 
